@@ -1,4 +1,4 @@
-using ArchLens.Notification.Api.Configurations;
+﻿using ArchLens.Notification.Api.Configurations;
 using ArchLens.Notification.Api.ExceptionHandlers;
 using ArchLens.Notification.Api.Middlewares;
 using ArchLens.Notification.Infrastructure;
@@ -72,7 +72,6 @@ try
                 ClockSkew = TimeSpan.FromMinutes(5),
             };
 
-            // SignalR sends the token via query string since WebSocket does not support custom headers
             options.Events = new JwtBearerEvents
             {
                 OnMessageReceived = context =>
