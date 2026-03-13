@@ -114,7 +114,7 @@ try
     app.UseAuthentication();
     app.UseAuthorization();
 
-    if (app.Environment.IsDevelopment())
+    if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName == "Docker")
     {
         app.UseSwagger();
         app.UseSwaggerUI();
