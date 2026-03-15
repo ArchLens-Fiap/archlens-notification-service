@@ -2,18 +2,14 @@
 
 > **Microsserviço de Notificações em Tempo Real via SignalR**
 > Hackathon FIAP - Fase 5 | Pós-Tech Software Architecture + IA para Devs
+>
+> **Autor:** Rafael Henrique Barbosa Pereira (RM366243)
 
 [![.NET 9.0](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![Docker](https://img.shields.io/badge/Docker-Container-2496ED)](https://www.docker.com/)
 [![SignalR](https://img.shields.io/badge/SignalR-Hub-512BD4)](https://learn.microsoft.com/aspnet/core/signalr/)
 [![Redis](https://img.shields.io/badge/Redis-7.0-DC382D)](https://redis.io/)
 [![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.x-FF6600)](https://www.rabbitmq.com/)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ArchLens-Fiap_archlens-notification-service)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ArchLens-Fiap_archlens-notification-service)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ArchLens-Fiap_archlens-notification-service)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ArchLens-Fiap_archlens-notification-service)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ArchLens-Fiap_archlens-notification-service)
 
 ## 📋 Descrição
 
@@ -347,6 +343,4 @@ graph LR
 
 ---
 
-**Autor:** Rafael Henrique Barbosa Pereira (RM366243)
-**Instituição:** FIAP - Pós-Tech Software Architecture + IA para Devs
-**Fase:** 5 - Hackathon (12SOAT + 6IADT)
+**Autor:** Rafael Henrique Barbosa Pereira (RM366243) | FIAP - Pós-Tech Software Architecture + IA para Devs | Fase 5 - Hackathon (12SOAT + 6IADT)
