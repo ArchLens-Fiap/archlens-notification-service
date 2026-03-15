@@ -9,6 +9,7 @@
     <ProjectReference Include="../../src/ArchLens.Notification.Domain/ArchLens.Notification.Domain.csproj" />
     <ProjectReference Include="../../src/ArchLens.Notification.Application/ArchLens.Notification.Application.csproj" />
     <ProjectReference Include="../../src/ArchLens.Notification.Infrastructure/ArchLens.Notification.Infrastructure.csproj" />
+    <ProjectReference Include="../../src/ArchLens.Notification.Application.Contracts/ArchLens.Notification.Application.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
