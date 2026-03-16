@@ -45,7 +45,8 @@ try
     });
     builder.Services.AddHealthChecks()
         .AddRedis(
-            builder.Configuration.GetRequiredSection("Redis")["ConnectionString"]!,
+            builder.Configuration.GetRequiredSection("Redis")["ConnectionString"]
+                ?? throw new InvalidOperationException("Redis:ConnectionString configuration is required."),
             name: "redis",
             tags: ["cache"]);
     builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
