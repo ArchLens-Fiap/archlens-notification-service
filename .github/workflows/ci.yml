@@ -12,6 +12,7 @@ concurrency:
 
 env:
   DOTNET_VERSION: "9.0.x"
+  IMAGE_NAME: ghcr.io/archlens-fiap/archlens-notification-service
 
 jobs:
   build-and-test:
@@ -19,6 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Checkout contracts (shared dependencies)
+        uses: actions/checkout@v4
+        with:
+          repository: ArchLens-Fiap/archlens-contracts
+          path: ../archlens-contracts
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -82,13 +89,13 @@ jobs:
           file: src/ArchLens.Notification.Api/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
-            ghcr.io/${{ github.repository }}:latest
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.IMAGE_NAME }}:latest
 
       - name: Trivy image scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ghcr.io/${{ github.repository }}:${{ github.sha }}
+          image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
           format: table
           exit-code: 0
           severity: CRITICAL,HIGH
