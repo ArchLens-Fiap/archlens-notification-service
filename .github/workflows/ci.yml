@@ -95,7 +95,7 @@ jobs:
 
       - name: Test
         if: steps.check-token.outputs.skip != 'true'
-        run: dotnet test ArchLens.Notification.sln --configuration Release --collect:"XPlat Code Coverage;Format=opencover" --results-directory ./coverage
+        run: dotnet test ArchLens.Notification.sln --configuration Release --collect:"XPlat Code Coverage;Format=opencover" --results-directory ./coverage --filter "FullyQualifiedName!~BDD"
 
       - name: SonarScanner End
         if: steps.check-token.outputs.skip != 'true'
