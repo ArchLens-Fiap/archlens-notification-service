@@ -1,5 +1,7 @@
 # ArchLens - Notification Service
 
+[![CI](https://github.com/ArchLens-Fiap/archlens-notification-service/actions/workflows/ci.yml/badge.svg)](https://github.com/ArchLens-Fiap/archlens-notification-service/actions/workflows/ci.yml) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=alert_status)](https://sonarcloud.io/dashboard?id=ArchLens-Fiap_archlens-notification-service) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ArchLens-Fiap_archlens-notification-service&metric=coverage)](https://sonarcloud.io/dashboard?id=ArchLens-Fiap_archlens-notification-service)
+
 > **Microsserviço de Notificações em Tempo Real via SignalR**
 > Hackathon FIAP - Fase 5 | Pós-Tech Software Architecture + IA para Devs
 >
