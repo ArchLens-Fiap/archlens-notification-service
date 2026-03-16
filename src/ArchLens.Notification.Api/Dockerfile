@@ -28,4 +28,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 ENV ASPNETCORE_URLS=http://+:8080
+USER $APP_UID
 ENTRYPOINT ["dotnet", "ArchLens.Notification.Api.dll"]
