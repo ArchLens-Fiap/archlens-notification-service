@@ -43,7 +43,6 @@ public static class DependencyInjection
             bus.SetKebabCaseEndpointNameFormatter();
             bus.AddConsumer<StatusChangedConsumer>();
             bus.AddConsumer<UserAccountDeletedConsumer>();
-            bus.AddConsumer<UserAccountDeletedConsumer>();
 
             bus.UsingRabbitMq((context, cfg) =>
             {
