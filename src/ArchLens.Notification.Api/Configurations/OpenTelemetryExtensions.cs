@@ -1,3 +1,4 @@
+using OpenTelemetry.Logs;
 ﻿using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
@@ -28,6 +29,8 @@ public static class OpenTelemetryExtensions
                 .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
                 .AddRuntimeInstrumentation()
+                .AddOtlpExporter(o => o.Endpoint = new Uri(otlpEndpoint)))
+            .WithLogging(logging => logging
                 .AddOtlpExporter(o => o.Endpoint = new Uri(otlpEndpoint)));
 
         return builder;
