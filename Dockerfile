@@ -21,9 +21,12 @@ COPY archlens-contracts/ ./archlens-contracts/
 COPY archlens-notification-service/ ./archlens-notification-service/
 
 WORKDIR /src/archlens-notification-service
-RUN dotnet publish src/ArchLens.Notification.Api -c Release -o /app/publish
+RUN dotnet publish src/ArchLens.Notification.Api -c Release --no-restore -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+LABEL org.opencontainers.image.source="https://github.com/ArchLens-Fiap/archlens-notification-service"
+LABEL org.opencontainers.image.title="ArchLens Notification Service"
+LABEL org.opencontainers.image.version="1.0.0"
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
