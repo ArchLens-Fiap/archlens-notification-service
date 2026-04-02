@@ -22,6 +22,7 @@ public static class OpenTelemetryExtensions
                     ["deployment.environment"] = builder.Environment.EnvironmentName
                 }))
             .WithTracing(tracing => tracing
+                .AddSource("MassTransit")
                 .AddAspNetCoreInstrumentation(o => o.RecordException = true)
                 .AddHttpClientInstrumentation()
                 .AddOtlpExporter(o => o.Endpoint = new Uri(otlpEndpoint)))
@@ -29,8 +30,6 @@ public static class OpenTelemetryExtensions
                 .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
                 .AddRuntimeInstrumentation()
-                .AddOtlpExporter(o => o.Endpoint = new Uri(otlpEndpoint)))
-            .WithLogging(logging => logging
                 .AddOtlpExporter(o => o.Endpoint = new Uri(otlpEndpoint)));
 
         return builder;

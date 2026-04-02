@@ -11,6 +11,7 @@
     <MassTransitVersion>8.3.6</MassTransitVersion>
     <SerilogVersion>4.2.0</SerilogVersion>
     <SerilogSinksConsoleVersion>6.0.0</SerilogSinksConsoleVersion>
+    <SerilogSinksOpenTelemetryVersion>4.2.0</SerilogSinksOpenTelemetryVersion>
     <SerilogAspNetCoreVersion>9.0.0</SerilogAspNetCoreVersion>
     <FluentValidationVersion>11.11.0</FluentValidationVersion>
     <MediatRVersion>12.4.1</MediatRVersion>
